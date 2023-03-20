@@ -11,7 +11,7 @@ def parallel_processing(n, j, data):
     for i in range(j):
         data_time = data[i]
         start_time, tread = heapq.heappop(treads)
-        swaps.append(tread, (start_time))
+        swaps.append((tread, start_time))
         heapq.heappush(treads, (start_time + data_time, tread))
     return swaps
 
@@ -23,7 +23,7 @@ def main():
         return
     
     result = parallel_processing(n, j, data)
-    total = x[-1][1]
+    total = result[-1][1]
     print(total)
     for i in range(len(result)):
         print(x[i][0], result[i][1])
