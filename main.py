@@ -1,5 +1,6 @@
 # python3
 import heapq
+
 def parallel_processing(n, j, data):
     treads = []
     # TODO: write the function for simulating parallel tasks, 
@@ -9,7 +10,7 @@ def parallel_processing(n, j, data):
     swaps = []
     for i in range(j):
         data_time = data[i]
-        start_time, tread = heap.heappop(treads)
+        start_time, tread = heapq.heappop(treads)
         swaps.append(tread, (start_time))
         heapq.heappush(treads, (start_time + data_time, tread))
     return swaps
