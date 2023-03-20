@@ -18,7 +18,7 @@ def main():
     try:
         n, j = map(int, input().split())
         data = list(map(int, input().split()))
-    excapt ValueError:
+    except ValueError:
         return
     
     result = parallel_processing(n, j, data)
