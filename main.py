@@ -26,7 +26,7 @@ def main():
     total = result[-1][1]
     print(total)
     for i in range(len(result)):
-        print(x[i][0], result[i][1])
+        print(result[i][0], result[i][1])
 
 
 
