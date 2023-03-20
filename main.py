@@ -1,5 +1,5 @@
 # python3
-
+import heapq
 def parallel_processing(n, j, data):
     treads = []
     # TODO: write the function for simulating parallel tasks, 
